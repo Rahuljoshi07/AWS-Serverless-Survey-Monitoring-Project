@@ -1,28 +1,30 @@
 # 📊 AWS Serverless Survey Monitoring Project
 
-This is a serverless web application hosted on AWS using S3, API Gateway, Lambda, CloudWatch, and SNS. It collects survey responses, logs metrics, visualizes data, and sends email alerts when submission traffic spikes.
+> **A Collaborative Project by [Rahul Joshi](https://www.linkedin.com/in/rahul-joshi7) & [Rohini Gusain](https://www.linkedin.com/in/rohini-gusain)**
+
+A cloud-native serverless solution built on AWS infrastructure leveraging S3, API Gateway, Lambda, CloudWatch, and SNS. It captures survey feedback, monitors system metrics, provides data visualization, and dispatches email notifications during high submission activity.
 
 ---
 
 ## 🔧 Tech Stack
 
-| AWS Service     | Purpose                                                      |
-|-----------------|--------------------------------------------------------------|
-| Amazon S3       | Hosts static website (survey form)                           |
-| API Gateway     | Exposes HTTP endpoint to handle form submissions             |
-| AWS Lambda      | Processes submissions, logs custom metrics                   |
-| Amazon CloudWatch | Tracks latency, submission count, logs, and dashboards     |
-| Amazon SNS      | Sends email alert if more than 5 submissions in 1 minute     |
+| AWS Service       | Purpose                                                      |
+|-------------------|--------------------------------------------------------------|
+| Amazon S3         | Hosts static website (survey form)                           |
+| API Gateway       | Exposes HTTP endpoint to handle form submissions             |
+| AWS Lambda        | Processes submissions, logs custom metrics                   |
+| Amazon CloudWatch | Tracks latency, submission count, logs, and dashboards       |
+| Amazon SNS        | Sends email alert if more than 5 submissions in 1 minute     |
 
 ---
 
 ## 🌐 How It Works
 
-1. User opens the survey website hosted on **Amazon S3**
-2. On form submission, the request is sent via **API Gateway**
-3. The request triggers an **AWS Lambda** function
-4. Lambda logs submission data and latency using **CloudWatch**
-5. If 5+ submissions occur within a minute, **SNS** sends an alert email
+1. **User Access** - Survey website hosted on **Amazon S3**
+2. **Form Submission** - Request sent via **API Gateway**
+3. **Processing** - **AWS Lambda** function triggered
+4. **Logging** - Lambda logs submission data and latency to **CloudWatch**
+5. **Alerting** - **SNS** sends email if 5+ submissions in 1 minute
 
 ---
 
@@ -41,9 +43,9 @@ If 5 or more submissions are received in a single minute, **SNS** triggers an em
 
 ---
 
-
 ## 📁 Project Structure
 
+```
 aws-serverless-survey/
 ├── lambda/                # Lambda function code
 │   └── lambda_function.py
@@ -62,32 +64,23 @@ aws-serverless-survey/
 ├── sns/                   # SNS setup steps
 │   └── sns_alert_setup.md
 └── README.md              # This documentation file
-
-
-
-
-
+```
 
 ---
 
-## 📸 Screenshots
+## 📸 CloudWatch Monitoring Screenshots
 
-### 📊 CloudWatch Monitoring Screenshots
+Real-time monitoring of the AWS survey website:
 
-Here are screenshots showing real-time monitoring of the AWS survey website:
+| Metric View | Latency Tracking |
+|-------------|------------------|
+| ![Metric View](cloudwatch/Screenshot%202025-06-11%20123031.png) | ![Latency Tracking](cloudwatch/Screenshot%202025-06-11%20123131.png) |
 
-1. **Metric View**
-   ![](cloudwatch/Screenshot%202025-06-11%20123031.png)
+| Submissions Count | SNS Alert Trigger |
+|-------------------|-------------------|
+| ![Submissions Count](cloudwatch/Screenshot%202025-06-11%20123204.png) | ![SNS Alert](cloudwatch/Screenshot%202025-06-11%20144739.png) |
 
-2. **Latency Tracking**
-   ![](cloudwatch/Screenshot%202025-06-11%20123131.png)
-
-3. **Submissions Count**
-   ![](cloudwatch/Screenshot%202025-06-11%20123204.png)
-
-4. **SNS Alert Trigger Setup**
-   ![](cloudwatch/Screenshot%202025-06-11%20144739.png)
-
+---
 
 ## ✉️ SNS Email Sample
 
@@ -102,8 +95,25 @@ This project demonstrates a fully serverless application using AWS cloud service
 
 ---
 
-## 🔗 Contact
+## 👥 Contributors
 
-📧 gusainrohini@gmail.com  
-🔗 [LinkedIn Profile](https://www.linkedin.com/in/rohini-gusain)  
-🔗 [GitHub Repo](https://github.com/Rohini-09/aws-serverless-survey)
+<table>
+  <tr>
+    <td align="center">
+      <strong>Rahul Joshi</strong><br>
+      📧 <a href="mailto:rahuljoshisg@gmail.com">rahuljoshisg@gmail.com</a><br>
+      🔗 <a href="https://www.linkedin.com/in/rahul-joshi7">LinkedIn</a>
+    </td>
+    <td align="center">
+      <strong>Rohini Gusain</strong><br>
+      📧 <a href="mailto:gusainrohini@gmail.com">gusainrohini@gmail.com</a><br>
+      🔗 <a href="https://www.linkedin.com/in/rohini-gusain">LinkedIn</a> | 
+      <a href="https://github.com/Rohini-09">GitHub</a>
+    </td>
+  </tr>
+</table>
+
+---
+
+**⭐ If you found this project helpful, please consider giving it a star!**
+
