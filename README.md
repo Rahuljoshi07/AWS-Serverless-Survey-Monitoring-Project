@@ -91,7 +91,7 @@ Real-time monitoring of the AWS survey website:
 
 ## 🚀 Conclusion
 
-This project demonstrates a fully serverless application using AWS cloud services. It showcases frontend hosting, serverless compute, real-time metrics logging, alerting, and observability — all managed without traditional servers.
+This project demonstrates a fully serverless application using AWS cloud services. It showcases frontend hosting, serverless compute, real-time metrics logging, alerting, and observability all managed without traditional servers.
 
 ---
 
